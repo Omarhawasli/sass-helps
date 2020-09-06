@@ -1,0 +1,94 @@
+body {
+  background-color: #e7a6bb;
+}
+
+.page {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 80vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 80vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.triangle-example::before, .triangle-example::after {
+  display: block;
+  content: "";
+  margin: 8px;
+}
+.triangle-example::before {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 100px solid blue;
+}
+.triangle-example::after {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid yellow;
+}
+
+.reveal-animation-example {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  background-color: skyblue;
+  position: relative;
+  animation: fadeIn 4s alternate 4s infinite;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: rotate(0deg);
+    width: 2px;
+    height: 1px;
+  }
+  to {
+    opacity: 1;
+    transform: rotate(180deg);
+  }
+}
+
+.text-xs {
+  font-size: 12px;
+}
+
+.text-m {
+  font-size: 16px;
+}
+
+.text-l {
+  font-size: 32px;
+}
+
+.text-xl {
+  font-size: 48px;
+}
+
+.text-xxl {
+  font-size: 61px;
+}
+
+/*# sourceMappingURL=main.css.map */

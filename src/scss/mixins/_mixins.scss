@@ -1,0 +1,65 @@
+
+@mixin reset-list () {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 10vh;
+  
+    
+
+}
+
+@mixin center ($direction: row) {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction ;
+    margin: 10rem auto;
+
+}
+
+@mixin hide () {
+
+    visibility: hidden;
+
+}
+
+@mixin triangel ($direction, $color: #000){
+    width: 0;
+    height: 0;
+
+    @if $direction == up { 
+
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-bottom: 100px solid $color;
+    }
+
+    @if $direction == down {
+
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-top: 100px solid $color;
+    }
+  
+}
+
+@mixin fade-in {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    background-color: skyblue;
+    position: relative;
+    animation: fadeIn 4s alternate 4s infinite;
+}
+
+
+
+@mixin font-size($size){
+    @if map-keys ($font-sizes, $size) {
+        font-size: map-get($font-sizes, $size);
+    } @else {
+        @error '#{$size} is not defined. Use #{$font-sizes}';
+    }
+}
